@@ -1,22 +1,34 @@
 import axios from 'axios'
+import csv from 'csv-parser'
+import fs from 'fs';
+const accounts = [];
 
-const callToServer = async () => {
-    const result = await axios({
-        method: 'post',
-        url: 'https://api.salesloft.com/v2/accounts.json',
-        data: {
-          name: 'Perico',
-          domain: 'perico.com'
-        },
-        headers: {
-            'Authorization':"Bearer v2_ak_103515_2d6b6360594c8162a28a03da5230c1d1aa3b9f344cb533838fefe4e975a237dd"
-        }
-      });
-    return result;
-}
+fs.createReadStream('SalesloftTest.csv')
+  .pipe(csv())
+  .on('data', (data) => accounts.push(data))
+  .on('end', async () => {
+    console.log('Call to server')
+    for(let account of accounts){
+        console.log(account)
+        const result = await axios({
+            method: 'post',
+            url: 'https://api.salesloft.com/v2/accounts.json',
+            data: account,
+            headers: {
+                'Authorization':"Bearer API_KEY"
+            }
+          });  
+          
+        console.log('result.data',result.data)  
+    }
+    
+  });
 
-const response = callToServer();
 
-console.log(response)
+
+  
+
+
+
 
 
