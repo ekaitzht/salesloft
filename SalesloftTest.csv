@@ -1,3 +1,3 @@
 name,domain,description,phone,website,linkedin_url,twitter_handle,street,city,state,postal_code,country,locale,industry,size
-TestAccount,hdivsecurity5.com,Esto es una descripción,666666666,www.hdivsecurity.com,https://www.linkedin.com/company/10540081,@hdivsecurity,C/Test,Pamplona,Navarra,31005,Spain,Europe,Software,50
-TestAccount2,hdivsecurity6.com,Esto es una descripción,666666666,www.hdivsecurity.com,https://www.linkedin.com/company/10540081,@hdivsecurity,C/Test,Pamplona,Navarra,31005,Spain,Europe,Software,50
+TestAccount,test.com,Esto es una descripción,666666666,www.test.com,https://www.linkedin.com/company/44444444,@test,C/Test,Pamplona,Navarra,31005,Spain,Europe,Software,50
+TestAccount2,test2.com,Esto es una descripción,666666666,www.test2.com,https://www.linkedin.com/company/44444444,@test2,C/Test,Pamplona,Navarra,31005,Spain,Europe,Software,50
